@@ -1,0 +1,24 @@
+{
+  "name": "bsale-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkegs/bsale-server.git"
+  },
+  "author": "Giovanni Orsi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arkegs/bsale-server/issues"
+  },
+  "homepage": "https://github.com/Arkegs/bsale-server#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
+  }
+}
