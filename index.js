@@ -32,5 +32,9 @@ const productRoutes = require('./routes/products');
 app.use('/api/categories', categoryRoutes);
 app.use('/api/products', productRoutes);
 
+app.get('*', function(req, res){
+    return res.send({status: 'error', message:'Invalid endpoint'});
+});
+
 // Initialize express app
 app.listen(port, () => console.log(`Oh yeah! Listening on port ${port}!`));
