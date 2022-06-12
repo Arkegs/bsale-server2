@@ -12,12 +12,11 @@ module.exports.getAll = function(req, res){
         : completeQuery += `WHERE product.category = ${req.query.category} `;
     }
     // Sort results by price or name
-    if(req.query.sortPrice || req.query.sortName){
-        if(req.query.sortPrice !== 'asc' && req.query.sortPrice !== 'desc') req.query.sortPrice = '';
-        if(req.query.sortName !== 'asc' && req.query.sortName !== 'desc') req.query.sortName = '';
-        (req.query.sortPrice)
-        ? completeQuery += `ORDER BY product.price ${req.query.sortPrice} `
-        : completeQuery += `ORDER BY product.name ${req.query.sortName} `
+    if(req.query.sort){
+        if (req.query.sort === 'price_asc') completeQuery += `ORDER BY product.price ASC `;
+        if (req.query.sort === 'price_desc') completeQuery += `ORDER BY product.price DESC `;
+        if (req.query.sort === 'name_asc') completeQuery += `ORDER BY product.name ASC `;
+        if (req.query.sort === 'name_desc') completeQuery += `ORDER BY product.name DESC `;
     }
     // Paginate
     completeQuery += 'LIMIT 8 ';

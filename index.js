@@ -5,6 +5,7 @@ if(process.env.NODE_ENV !== "production"){
 
 // Require packages
 const express = require('express');
+const cors = require('cors');
 
 // Establish connection with DB
 const connection = require('./db_connection');
@@ -25,6 +26,12 @@ setInterval(keepAlive, 4999);
 // Express app setup
 const port = process.env.SERVERPORT || 5000;
 const app = express();
+
+const corsOptions = {
+    origin: process.env.CLIENT_URL,
+    optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
 
 // RESTful endpoints setup
 const categoryRoutes = require('./routes/categories');
