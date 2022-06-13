@@ -24,7 +24,7 @@ function keepAlive() {
 setInterval(keepAlive, 4999);
 
 // Express app setup
-const port = process.env.SERVERPORT || 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 const corsOptions = {
