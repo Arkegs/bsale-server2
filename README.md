@@ -43,7 +43,7 @@ ___
 ```
 GET /products?search=Item&sort=price_asc
 GET /products?category=1&page=2
-GET /produtcs?sort=price_asc&page=4
+GET /products?sort=price_asc&page=4
 GET /products/123
 GET /categories
 ```
