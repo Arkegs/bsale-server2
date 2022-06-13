@@ -44,6 +44,8 @@ ___
 GET /products?search=Item&sort=price_asc
 GET /products?category=1&page=2
 GET /produtcs?sort=price_asc&page=4
+GET /products/123
+GET /categories
 ```
 
 ## Responses
@@ -78,7 +80,7 @@ Every endpoint will return a JSON object with three possible values:
 ## Technologies
 Project is created with:
 * Express ^4.18.1
-* Node.js 
+* Node.js ^14.18.1
 * MySQL (Node module) ^2.18.1
 * CORS ^2.8.5
 
