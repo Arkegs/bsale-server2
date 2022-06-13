@@ -18,9 +18,9 @@ through Environment variables: 'DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME', a
 
 | Endpoint                                          | Description                                                                                 |
 | ------------------------------------------------- |---------------------------------------------------------------------------------------------|
-| `GET`/products                   | Endpoint to get all products. Can be filtered through certain optional query parameters.    |
-| `GET`/products/{product_id}      | Endpoint to get a single product through its ID.                                            |
-| `GET`/categories                 | Endpoint to get all the available categories on DB.                                              |
+| `GET`api/products                   | Endpoint to get all products. Can be filtered through certain optional query parameters.    |
+| `GET`api/products/{product_id}      | Endpoint to get a single product through its ID.                                            |
+| `GET`api/categories                 | Endpoint to get all the available categories on DB.                                              |
 ___
 
 ### `official client only`/products
@@ -41,11 +41,11 @@ ___
 ### Examples
 
 ```
-GET /products?search=Item&sort=price_asc
-GET /products?category=1&page=2
-GET /products?sort=price_asc&page=4
-GET /products/123
-GET /categories
+GET api/products?search=Item&sort=price_asc
+GET api/products?category=1&page=2
+GET api/products?sort=price_asc&page=4
+GET api/products/123
+GET api/categories
 ```
 
 ## Responses
